@@ -1,5 +1,15 @@
 let tape = require('tape')
-let html = require('bel')
+
+const belit = require('belit')
+const hyperx = require('hyperx')
+const html = hyperx(belit(), {comments: true})
+
+const getEventsFromElement = (newNode, oldNode) => {
+  return [].concat(newNode.events).concat(oldNode.events)
+}
+const getEventsFromList = () => {
+  return ['onabort']
+}
 
 module.exports = abstractMorphEvents
 
@@ -36,12 +46,28 @@ function abstractMorphEvents (morph) {
 
         t.equal(expectationMet, true, 'result was expected')
       })
-      t.test('should not copy onabort events', function (t) {
+      t.test('should not copy onabort events (from eventList)', function (t) {
         t.plan(1)
         let expectationMet = true
         let a = html`<input onabort=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromList)
+
+        raiseEvent(res, 'abort')
+
+        function fail (e) {
+          e.preventDefault()
+          expectationMet = false
+        }
+
+        t.equal(expectationMet, true, 'result was expected')
+      })
+      t.test('should not copy onabort events (from element events)', function (t) {
+        t.plan(1)
+        let expectationMet = true
+        let a = html`<input onabort=${fail}></input>`
+        let b = html`<input></input>`
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'abort')
 
@@ -57,7 +83,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onabort=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'abort')
 
@@ -87,7 +113,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onblur=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'blur')
 
@@ -103,7 +129,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onblur=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'blur')
 
@@ -133,7 +159,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onchange=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'change')
 
@@ -149,7 +175,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onchange=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'change')
 
@@ -179,7 +205,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onclick=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'click')
 
@@ -195,7 +221,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onclick=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'click')
 
@@ -225,7 +251,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input oncontextmenu=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'contextmenu')
 
@@ -241,7 +267,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input oncontextmenu=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'contextmenu')
 
@@ -271,7 +297,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input ondblclick=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'dblclick')
 
@@ -287,7 +313,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input ondblclick=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'dblclick')
 
@@ -317,7 +343,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input ondrag=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'drag')
 
@@ -333,7 +359,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input ondrag=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'drag')
 
@@ -363,7 +389,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input ondragend=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'dragend')
 
@@ -379,7 +405,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input ondragend=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'dragend')
 
@@ -409,7 +435,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input ondragenter=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'dragenter')
 
@@ -425,7 +451,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input ondragenter=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'dragenter')
 
@@ -455,7 +481,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input ondragleave=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'dragleave')
 
@@ -471,7 +497,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input ondragleave=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'dragleave')
 
@@ -501,7 +527,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input ondragover=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'dragover')
 
@@ -517,7 +543,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input ondragover=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'dragover')
 
@@ -547,7 +573,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input ondragstart=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'dragstart')
 
@@ -563,7 +589,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input ondragstart=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'dragstart')
 
@@ -593,7 +619,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input ondrop=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'drop')
 
@@ -609,7 +635,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input ondrop=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'drop')
 
@@ -639,7 +665,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onerror=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'error')
 
@@ -655,7 +681,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onerror=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'error')
 
@@ -685,7 +711,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onfocus=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'focus')
 
@@ -701,7 +727,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onfocus=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'focus')
 
@@ -732,7 +758,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onfocusin=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'focusin')
 
@@ -748,7 +774,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onfocusin=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'focusin')
 
@@ -780,7 +806,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onfocusout=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'focusout')
 
@@ -796,7 +822,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onfocusout=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'focusout')
 
@@ -827,7 +853,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input oninput=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'input')
 
@@ -843,7 +869,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input oninput=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'input')
 
@@ -873,7 +899,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onkeydown=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'keydown')
 
@@ -889,7 +915,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onkeydown=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'keydown')
 
@@ -919,7 +945,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onkeypress=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'keypress')
 
@@ -935,7 +961,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onkeypress=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'keypress')
 
@@ -965,7 +991,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onkeyup=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'keyup')
 
@@ -981,7 +1007,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onkeyup=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'keyup')
 
@@ -1011,7 +1037,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onmousedown=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'mousedown')
 
@@ -1027,7 +1053,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onmousedown=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'mousedown')
 
@@ -1057,7 +1083,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onmouseenter=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'mouseenter')
 
@@ -1073,7 +1099,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onmouseenter=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'mouseenter')
 
@@ -1103,7 +1129,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onmouseleave=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'mouseleave')
 
@@ -1119,7 +1145,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onmouseleave=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'mouseleave')
 
@@ -1149,7 +1175,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onmousemove=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'mousemove')
 
@@ -1165,7 +1191,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onmousemove=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'mousemove')
 
@@ -1195,7 +1221,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onmouseout=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'mouseout')
 
@@ -1211,7 +1237,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onmouseout=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'mouseout')
 
@@ -1241,7 +1267,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onmouseover=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'mouseover')
 
@@ -1257,7 +1283,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onmouseover=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'mouseover')
 
@@ -1287,7 +1313,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onmouseup=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'mouseup')
 
@@ -1303,7 +1329,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onmouseup=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'mouseup')
 
@@ -1333,7 +1359,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onreset=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'reset')
 
@@ -1349,7 +1375,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onreset=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'reset')
 
@@ -1379,7 +1405,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onresize=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'resize')
 
@@ -1395,7 +1421,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onresize=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'resize')
 
@@ -1425,7 +1451,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onscroll=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'scroll')
 
@@ -1441,7 +1467,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onscroll=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'scroll')
 
@@ -1471,7 +1497,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onselect=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'select')
 
@@ -1487,7 +1513,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onselect=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'select')
 
@@ -1517,7 +1543,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input onsubmit=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'submit')
 
@@ -1533,7 +1559,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input onsubmit=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'submit')
 
@@ -1564,7 +1590,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input ontouchcancel=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'touchcancel')
 
@@ -1580,7 +1606,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input ontouchcancel=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'touchcancel')
 
@@ -1612,7 +1638,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input ontouchend=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'touchend')
 
@@ -1628,7 +1654,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input ontouchend=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'touchend')
 
@@ -1660,7 +1686,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input ontouchmove=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'touchmove')
 
@@ -1676,7 +1702,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input ontouchmove=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'touchmove')
 
@@ -1708,7 +1734,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<input ontouchstart=${fail}></input>`
         let b = html`<input></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'touchstart')
 
@@ -1724,7 +1750,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<input></input>`
         let b = html`<input ontouchstart=${pass}></input>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'touchstart')
 
@@ -1755,7 +1781,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = true
         let a = html`<body onunload=${fail}></body>`
         let b = html`<body></body>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'unload')
 
@@ -1771,7 +1797,7 @@ function abstractMorphEvents (morph) {
         let expectationMet = false
         let a = html`<body></body>`
         let b = html`<body onunload=${pass}></body>`
-        let res = morph(a, b)
+        let res = morph(a, b, getEventsFromElement)
 
         raiseEvent(res, 'unload')
 

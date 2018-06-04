@@ -68,11 +68,6 @@ decade old, and don't provide custom behavior by removing all hooks. This way
 we can guarantee a consistent, out-of-the box experience for all your diffing
 needs.
 
-### Why doesn't this work in Node?
-Node has no concept of a DOM - server side rendering is basically fancy string
-concatenation. If you want to combine HTML strings in Node, check out
-[hyperstream][hyperstream].
-
 ### This library seems cool, I'd like to build my own!
 Nanomorph was optimized for simplicity, but different situations might require
 different tradeoffs. So in order to allow folks to build their own
@@ -81,11 +76,16 @@ regardless if you're doing it to solve a problem, or just for fun: you can use
 the same tests we use for your own implementation. Yay! :sparkles:
 
 ## API
-### tree = nanomorph(oldTree, newTree)
+### tree = nanomorph(oldTree, newTree, getEvents)
 Diff a tree of HTML elements against another tree of HTML elements and create
 a patched result that can be applied on the DOM.
 
 :warning: nanomorph will modify the newTree and it should be discarded after use
+
+`getEvents` is a function which takes in a newNode and oldNode, and returns
+a list of events. It is an optional parameter, and can (in the similest case)
+return a hardcoded list of events you are watching for. In more complicated
+scenarios, you can query for events for both the new and old element.
 
 ## Installation
 ```sh
