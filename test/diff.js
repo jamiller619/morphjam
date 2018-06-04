@@ -1,5 +1,8 @@
 var tape = require('tape')
-var html = require('bel')
+const belit = require('belit')
+const hyperx = require('hyperx')
+const html = hyperx(belit(), {comments: true})
+
 var nanomorph = require('../')
 
 module.exports = abstractMorph

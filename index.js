@@ -19,7 +19,10 @@ module.exports = nanomorph
 //   -> diff nodes and apply patch to old node
 // nodes are the same
 //   -> walk all child nodes and append to old node
-function nanomorph (oldTree, newTree) {
+// getEvents is a function which takes in a newNode,
+// an oldNode, and returns a list of events to be processed
+// (this can be a hard-coded list, or a known list of events for the element)
+function nanomorph (oldTree, newTree, getEvents) {
   // if (DEBUG) {
   //   console.log(
   //   'nanomorph\nold\n  %s\nnew\n  %s',
@@ -29,13 +32,13 @@ function nanomorph (oldTree, newTree) {
   // }
   assert.equal(typeof oldTree, 'object', 'nanomorph: oldTree should be an object')
   assert.equal(typeof newTree, 'object', 'nanomorph: newTree should be an object')
-  var tree = walk(newTree, oldTree)
+  var tree = walk(newTree, oldTree, getEvents)
   // if (DEBUG) console.log('=> morphed\n  %s', tree.outerHTML)
   return tree
 }
 
 // Walk and morph a dom tree
-function walk (newNode, oldNode) {
+function walk (newNode, oldNode, getEvents) {
   // if (DEBUG) {
   //   console.log(
   //   'walk\nold\n  %s\nnew\n  %s',
@@ -52,7 +55,7 @@ function walk (newNode, oldNode) {
   } else if (newNode.tagName !== oldNode.tagName) {
     return newNode
   } else {
-    morph(newNode, oldNode)
+    morph(newNode, oldNode, getEvents)
     updateChildren(newNode, oldNode)
     return oldNode
   }
@@ -60,7 +63,7 @@ function walk (newNode, oldNode) {
 
 // Update the children of elements
 // (obj, obj) -> null
-function updateChildren (newNode, oldNode) {
+function updateChildren (newNode, oldNode, getEvents) {
   // if (DEBUG) {
   //   console.log(
   //   'updateChildren\nold\n  %s\nnew\n  %s',
@@ -99,7 +102,7 @@ function updateChildren (newNode, oldNode) {
 
     // Both nodes are the same, morph
     } else if (same(newChild, oldChild)) {
-      morphed = walk(newChild, oldChild)
+      morphed = walk(newChild, oldChild, getEvents)
       if (morphed !== oldChild) {
         oldNode.replaceChild(morphed, oldChild)
         offset++
@@ -119,13 +122,13 @@ function updateChildren (newNode, oldNode) {
 
       // If there was a node with the same ID or placeholder in the old list
       if (oldMatch) {
-        morphed = walk(newChild, oldMatch)
+        morphed = walk(newChild, oldMatch, getEvents)
         if (morphed !== oldMatch) offset++
         oldNode.insertBefore(morphed, oldChild)
 
       // It's safe to morph two nodes in-place if neither has an ID
       } else if (!newChild.id && !oldChild.id) {
-        morphed = walk(newChild, oldChild)
+        morphed = walk(newChild, oldChild, getEvents)
         if (morphed !== oldChild) {
           oldNode.replaceChild(morphed, oldChild)
           offset++
