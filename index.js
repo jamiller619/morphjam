@@ -56,7 +56,7 @@ function walk (newNode, oldNode, getEvents) {
     return newNode
   } else {
     morph(newNode, oldNode, getEvents)
-    updateChildren(newNode, oldNode)
+    updateChildren(newNode, oldNode, getEvents)
     return oldNode
   }
 }
