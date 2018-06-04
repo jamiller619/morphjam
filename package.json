@@ -1,6 +1,6 @@
 {
   "name": "nanomorph",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "Hyper fast diffing algorithm for real DOM nodes",
   "main": "index.js",
   "scripts": {
@@ -20,16 +20,12 @@
     "tram-one"
   ],
   "license": "MIT",
-  "browser": {
-    "assert": "nanoassert"
-  },
   "devDependencies": {
     "belit": "^4.1.0",
     "browserify": "^14.1.0",
     "dependency-check": "^2.5.1",
     "hyperx": "^2.3.1",
     "math-random-seed": "^1.0.0",
-    "nanoassert": "^1.1.0",
     "standard": "^10.0.3",
     "tape": "^4.6.0",
     "tape-run": "^3.0.0"
