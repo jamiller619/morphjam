@@ -1,12 +1,12 @@
-# nanomorph [![stability][0]][1]
-[![npm version][2]][3] [![build status][4]][5]
+# tatermorph
+[![npm version][2]][3]
 [![downloads][8]][9] [![js-standard-style][10]][11]
 
 Hyper fast diffing algorithm for real DOM nodes :zap:
 
 ## Usage
 ```js
-var morph = require('nanomorph')
+var morph = require('tatermorph')
 var html = require('bel')
 
 var tree = html`<div>hello people</div>`
@@ -47,13 +47,13 @@ var el = html`
 Sometimes we want to tell the algorithm to not evaluate certain nodes (and its
 children). This can be because we're sure they haven't changed, or perhaps
 because another piece of code is managing that part of the DOM tree. To achieve
-this `nanomorph` evaluates the `.isSameNode()` method on nodes to determine if
+this `tatermorph` evaluates the `.isSameNode()` method on nodes to determine if
 they should be updated or not.
 
 ```js
 var el = html`<div>node</div>`
 
-// tell nanomorph to not compare the DOM tree if they're both divs
+// tell tatermorph to not compare the DOM tree if they're both divs
 el.isSameNode = function (target) {
   return (target && target.nodeName && target.nodeName === 'DIV')
 }
@@ -68,19 +68,24 @@ decade old, and don't provide custom behavior by removing all hooks. This way
 we can guarantee a consistent, out-of-the box experience for all your diffing
 needs.
 
+### How is this different from nanomorph?
+This is a fork of the choojs project nanomorph, however we have a few differences.
+Events are determined no longer a hard-coded list, but are determined by a function
+you provide. We've also changed some of the logic to be less nuanced about namespaces. This shares _most_ of the same test suite.
+
 ### This library seems cool, I'd like to build my own!
-Nanomorph was optimized for simplicity, but different situations might require
+tatermorph was optimized for simplicity, but different situations might require
 different tradeoffs. So in order to allow folks to build their own
 implementation we expose our test suite as a function you can call. So
 regardless if you're doing it to solve a problem, or just for fun: you can use
 the same tests we use for your own implementation. Yay! :sparkles:
 
 ## API
-### tree = nanomorph(oldTree, newTree, getEvents)
+### tree = tatermorph(oldTree, newTree, getEvents)
 Diff a tree of HTML elements against another tree of HTML elements and create
 a patched result that can be applied on the DOM.
 
-:warning: nanomorph will modify the newTree and it should be discarded after use
+:warning: tatermorph will modify the newTree and it should be discarded after use
 
 `getEvents` is a function which takes in a newNode and oldNode, and returns
 a list of events. It is an optional parameter, and can (in the similest case)
@@ -89,7 +94,7 @@ scenarios, you can query for events for both the new and old element.
 
 ## Installation
 ```sh
-$ npm install nanomorph
+$ npm install tatermorph
 ```
 
 ## See Also
@@ -108,23 +113,17 @@ $ npm install nanomorph
 - [how to write your own virtual dom 1][own-vdom-1]
 - [how to write your own virtual dom 2][own-vdom-2]
 
-## Authors
+## Original Authors
 - [Kristofer Joseph](https://github.com/kristoferjoseph)
 - [Yoshua Wuyts](https://github.com/yoshuawuyts)
 
-## License
+## Original License
 [MIT](https://tldrlegal.com/license/mit-license)
 
-[0]: https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square
-[1]: https://nodejs.org/api/documentation.html#documentation_stability_index
-[2]: https://img.shields.io/npm/v/nanomorph.svg?style=flat-square
-[3]: https://npmjs.org/package/nanomorph
-[4]: https://img.shields.io/travis/choojs/nanomorph/master.svg?style=flat-square
-[5]: https://travis-ci.org/choojs/nanomorph
-[6]: https://img.shields.io/codecov/c/github/choojs/nanomorph/master.svg?style=flat-square
-[7]: https://codecov.io/github/choojs/nanomorph
-[8]: http://img.shields.io/npm/dm/nanomorph.svg?style=flat-square
-[9]: https://npmjs.org/package/nanomorph
+[2]: https://img.shields.io/npm/v/tatermorph.svg?style=flat-square
+[3]: https://npmjs.org/package/tatermorph
+[8]: http://img.shields.io/npm/dm/tatermorph.svg?style=flat-square
+[9]: https://npmjs.org/package/tatermorph
 [10]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [11]: https://github.com/feross/standard
 
