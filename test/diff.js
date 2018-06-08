@@ -28,15 +28,6 @@ function abstractMorph (morph) {
         t.equal(res.outerHTML, expected, 'result was expected')
       })
 
-      t.test('should morph a node with namespaced attribute', function (t) {
-        t.plan(1)
-        var a = html`<svg><use xlink:href="#heybooboo"></use></svg>`
-        var b = html`<svg><use xlink:href="#boobear"></use></svg>`
-        var expected = b.outerHTML
-        var res = morph(a, b)
-        t.equal(res.outerHTML, expected, 'result was expected')
-      })
-
       t.test('should ignore if node is same', function (t) {
         t.plan(1)
         var a = html`<p>hello world</p>`

@@ -1,10 +1,8 @@
-var assert = require('assert')
-var morph = require('./lib/morph')
+const assert = require('assert')
+const morph = require('./lib/morph')
 
-var TEXT_NODE = 3
+const TEXT_NODE = 3
 // var DEBUG = false
-
-module.exports = nanomorph
 
 // Morph one tree into another tree
 //
@@ -22,7 +20,7 @@ module.exports = nanomorph
 // getEvents is a function which takes in a newNode,
 // an oldNode, and returns a list of events to be processed
 // (this can be a hard-coded list, or a known list of events for the element)
-function nanomorph (oldTree, newTree, getEvents) {
+module.exports = (oldTree, newTree, getEvents) => {
   // if (DEBUG) {
   //   console.log(
   //   'nanomorph\nold\n  %s\nnew\n  %s',
@@ -32,13 +30,13 @@ function nanomorph (oldTree, newTree, getEvents) {
   // }
   assert.equal(typeof oldTree, 'object', 'nanomorph: oldTree should be an object')
   assert.equal(typeof newTree, 'object', 'nanomorph: newTree should be an object')
-  var tree = walk(newTree, oldTree, getEvents)
+  const tree = walk(newTree, oldTree, getEvents)
   // if (DEBUG) console.log('=> morphed\n  %s', tree.outerHTML)
   return tree
 }
 
 // Walk and morph a dom tree
-function walk (newNode, oldNode, getEvents) {
+const walk = (newNode, oldNode, getEvents) => {
   // if (DEBUG) {
   //   console.log(
   //   'walk\nold\n  %s\nnew\n  %s',
@@ -63,7 +61,7 @@ function walk (newNode, oldNode, getEvents) {
 
 // Update the children of elements
 // (obj, obj) -> null
-function updateChildren (newNode, oldNode, getEvents) {
+const updateChildren = (newNode, oldNode, getEvents) => {
   // if (DEBUG) {
   //   console.log(
   //   'updateChildren\nold\n  %s\nnew\n  %s',
@@ -71,14 +69,14 @@ function updateChildren (newNode, oldNode, getEvents) {
   //   newNode && newNode.outerHTML
   // )
   // }
-  var oldChild, newChild, morphed, oldMatch
+  let morphed
 
   // The offset is only ever increased, and used for [i - offset] in the loop
-  var offset = 0
+  let offset = 0
 
   for (var i = 0; ; i++) {
-    oldChild = oldNode.childNodes[i]
-    newChild = newNode.childNodes[i - offset]
+    const oldChild = oldNode.childNodes[i]
+    const newChild = newNode.childNodes[i - offset]
     // if (DEBUG) {
     //   console.log(
     //   '===\n- old\n  %s\n- new\n  %s',
@@ -110,15 +108,9 @@ function updateChildren (newNode, oldNode, getEvents) {
 
     // Both nodes do not share an ID or a placeholder, try reorder
     } else {
-      oldMatch = null
-
       // Try and find a similar node somewhere in the tree
-      for (var j = i; j < oldNode.childNodes.length; j++) {
-        if (same(oldNode.childNodes[j], newChild)) {
-          oldMatch = oldNode.childNodes[j]
-          break
-        }
-      }
+      const oldMatch = Array.from(oldNode.children)
+        .slice(i).find(child => same(child, newChild))
 
       // If there was a node with the same ID or placeholder in the old list
       if (oldMatch) {
@@ -143,7 +135,7 @@ function updateChildren (newNode, oldNode, getEvents) {
   }
 }
 
-function same (a, b) {
+const same = (a, b) => {
   if (a.id) return a.id === b.id
   if (a.isSameNode) return a.isSameNode(b)
   if (a.tagName !== b.tagName) return false

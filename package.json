@@ -1,14 +1,15 @@
 {
-  "name": "nanomorph",
-  "version": "6.0.3",
+  "name": "tatermorph",
+  "version": "7.0.0",
   "description": "Hyper fast diffing algorithm for real DOM nodes",
   "main": "index.js",
   "scripts": {
     "deps": "dependency-check .",
     "test": "standard && npm run deps && browserify test/index.js | tape-run",
-    "test:fast": "browserify test/diff.js | tape-run"
+    "test:fast": "browserify test/diff.js | tape-run",
+    "start": "bankai start --debug test/diff.js"
   },
-  "repository": "Tram-One/nanomorph",
+  "repository": "Tram-One/tatermorph",
   "keywords": [
     "dom",
     "diff",
@@ -17,11 +18,13 @@
     "choo",
     "bel",
     "yo-yo",
-    "tram-one"
+    "tram-one",
+    "nanomorph"
   ],
   "license": "MIT",
   "devDependencies": {
-    "belit": "^4.1.0",
+    "bankai": "^8.0.0",
+    "belit": "^4.1.2",
     "browserify": "^14.1.0",
     "dependency-check": "^2.5.1",
     "hyperx": "^2.3.1",
