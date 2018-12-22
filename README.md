@@ -74,7 +74,7 @@ Events are determined no longer a hard-coded list, but are determined by a funct
 you provide. We've also changed some of the logic to be less nuanced about namespaces. This shares _most_ of the same test suite.
 
 ### How is this different from tatermorph?
-So far, it's the same package, only renamed. But that will change soon as it becomes more integrated with astate.
+So far, it's the same package, only renamed and a removed dep on the assert package that was being auto-included in projects. However, this will only grow as time goes on as it becomes more integrated with the astate project.
 
 ### This library seems cool, I'd like to build my own!
 morphjam was optimized for simplicity, but different situations might require
