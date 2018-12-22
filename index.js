@@ -1,4 +1,3 @@
-const assert = require('assert')
 const morph = require('./lib/morph')
 
 const TEXT_NODE = 3
@@ -28,8 +27,14 @@ module.exports = (oldTree, newTree, getEvents) => {
   //   newTree && newTree.outerHTML
   // )
   // }
-  assert.equal(typeof oldTree, 'object', 'nanomorph: oldTree should be an object')
-  assert.equal(typeof newTree, 'object', 'nanomorph: newTree should be an object')
+  // assert.equal(typeof oldTree, 'object', 'nanomorph: oldTree should be an object')
+  // assert.equal(typeof newTree, 'object', 'nanomorph: newTree should be an object')
+  const objCheck = test => typeof test === 'object'
+
+  if (!objCheck(oldTree) || !objCheck(newTree)) {
+    throw new Error('morphjam: oldTree and newTree should be an object')
+  }
+
   const tree = walk(newTree, oldTree, getEvents)
   // if (DEBUG) console.log('=> morphed\n  %s', tree.outerHTML)
   return tree

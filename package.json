@@ -1,5 +1,5 @@
 {
-  "name": "tatermorph",
+  "name": "morphjam",
   "version": "7.0.0",
   "description": "Hyper fast diffing algorithm for real DOM nodes",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "test:fast": "browserify test/diff.js | tape-run",
     "start": "bankai start --debug test/diff.js"
   },
-  "repository": "Tram-One/tatermorph",
+  "repository": "jamiller619/morphjam",
   "keywords": [
     "dom",
     "diff",
@@ -18,7 +18,8 @@
     "choo",
     "bel",
     "yo-yo",
-    "tram-one",
+    "jamiller619",
+    "morphjam",
     "nanomorph"
   ],
   "license": "MIT",

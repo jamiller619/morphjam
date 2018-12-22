@@ -1,0 +1,1601 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"evenT",
+				"eventType〔variable〕"
+			],
+			[
+				"render",
+				"renderEditInput"
+			],
+			[
+				"Rea",
+				"ReactDOM"
+			],
+			[
+				"hi",
+				"highlightedContent"
+			],
+			[
+				"align",
+				"align-items: "
+			],
+			[
+				"current",
+				"currentSlideElement"
+			],
+			[
+				"tra",
+				"transformPct"
+			],
+			[
+				"forecast",
+				"forecastType"
+			],
+			[
+				"Carousel",
+				"Carousel.Slide"
+			],
+			[
+				"Location",
+				"LocationNameParserError"
+			],
+			[
+				"geocode",
+				"geocodeReverse"
+			],
+			[
+				"temp",
+				"temperature"
+			],
+			[
+				"calcC",
+				"calcColors"
+			],
+			[
+				"calc",
+				"calcColors"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"getse",
+				"getSetLocation〔variable〕"
+			],
+			[
+				"curre",
+				"currently"
+			],
+			[
+				"temper",
+				"temperatureHigh"
+			],
+			[
+				"weat",
+				"weatherService"
+			],
+			[
+				"D",
+				"DarkSkyApi.loadForecast"
+			],
+			[
+				"timeCac",
+				"timeCacheSaved〔variable〕"
+			],
+			[
+				"timeCha",
+				"timeCacheSaved〔variable〕"
+			],
+			[
+				"google",
+				"googleApiCallback"
+			],
+			[
+				"geo",
+				"geocoder"
+			],
+			[
+				"tm",
+				"temperature"
+			],
+			[
+				"fore",
+				"forecastSpan"
+			],
+			[
+				"nodeTyp",
+				"nodeTypeIndex〔variable〕"
+			],
+			[
+				"nodeTYpe",
+				"nodeTypeIndex〔variable〕"
+			],
+			[
+				"No",
+				"NodeTypes"
+			],
+			[
+				"Fresh",
+				"FreshElement"
+			],
+			[
+				"fresh",
+				"freshElementType〔variable〕"
+			],
+			[
+				"fragme",
+				"fragmentWrap"
+			],
+			[
+				"fres",
+				"freshChildren〔variable〕"
+			],
+			[
+				"freshChild",
+				"freshChildrenCount〔variable〕"
+			],
+			[
+				"first",
+				"firstElementChild"
+			],
+			[
+				"onRend",
+				"onRenderCompleteCallback"
+			],
+			[
+				"handle",
+				"handleAttachEvent〔function〕"
+			],
+			[
+				"addition",
+				"additionalObjects"
+			],
+			[
+				"parseset",
+				"parseSetStateAdditionalArgument"
+			],
+			[
+				"parseSet",
+				"parseSetStateAdditionalArgument"
+			],
+			[
+				"filter",
+				"filterNodeAttributes"
+			],
+			[
+				"att",
+				"attributes〔argument〕"
+			],
+			[
+				"obje",
+				"objectFilter〔function〕"
+			],
+			[
+				"dom",
+				"domNamespaces"
+			],
+			[
+				"setNode",
+				"setNodeAttributes〔variable〕"
+			],
+			[
+				"elemen",
+				"elementType〔variable〕"
+			],
+			[
+				"elem",
+				"elementType〔variable〕"
+			],
+			[
+				"await",
+				"awaitChildrenRenderComplete"
+			],
+			[
+				"rend",
+				"renderedTarget〔variable〕"
+			],
+			[
+				"compone",
+				"componentRef〔variable〕"
+			],
+			[
+				"copy",
+				"copyStaticFiles〔function〕"
+			],
+			[
+				"packg",
+				"packages"
+			],
+			[
+				"config",
+				"configDefaultsCopy〔variable〕"
+			],
+			[
+				"outup",
+				"outputFile"
+			],
+			[
+				"gener",
+				"generateConfig"
+			],
+			[
+				"configde",
+				"configDefaultsClone〔variable〕"
+			],
+			[
+				"parent",
+				"parentRef"
+			],
+			[
+				"atta",
+				"attachNode"
+			],
+			[
+				"pre",
+				"previousSibling"
+			],
+			[
+				"loc",
+				"locNodeRef〔variable〕"
+			],
+			[
+				"Compon",
+				"ComponentPrototype〔variable〕"
+			],
+			[
+				"compon",
+				"componentConstructor〔argument〕"
+			],
+			[
+				"componen",
+				"componentConstructor"
+			],
+			[
+				"des",
+				"descriptors"
+			],
+			[
+				"html",
+				"htmlAttributes"
+			],
+			[
+				"append",
+				"appendChild"
+			],
+			[
+				"createElem",
+				"createElementNS"
+			],
+			[
+				"namespa",
+				"namespaces"
+			],
+			[
+				"namep",
+				"namespaces"
+			],
+			[
+				"names",
+				"namespaces"
+			],
+			[
+				"createElement",
+				"createElementNS〔function〕"
+			],
+			[
+				"createEleme",
+				"createElementNS〔function〕"
+			],
+			[
+				"create",
+				"createImmutableState"
+			],
+			[
+				"define",
+				"defineCustomElementLifecycleMethods〔function〕"
+			],
+			[
+				"attr",
+				"attributes"
+			],
+			[
+				"merged",
+				"mergedAttrList〔variable〕"
+			],
+			[
+				"is",
+				"isInitialized"
+			],
+			[
+				"merge",
+				"mergedComponent〔variable〕"
+			],
+			[
+				"com",
+				"component〔variable〕"
+			],
+			[
+				"appl",
+				"applyConfigStyle〔function〕"
+			],
+			[
+				"observe",
+				"observedAttributes"
+			],
+			[
+				"desc",
+				"descriptors〔variable〕"
+			],
+			[
+				"curr",
+				"currDescriptors"
+			],
+			[
+				"exte",
+				"extendedBase〔variable〕"
+			],
+			[
+				"customel",
+				"customElementConstructor〔argument〕"
+			],
+			[
+				"dfine",
+				"defineProperty"
+			],
+			[
+				"customEleme",
+				"customElementConstructor〔argument〕"
+			],
+			[
+				"previous",
+				"previouslyDefinedCheck〔function〕"
+			],
+			[
+				"get",
+				"getOwnPropertyDescriptors"
+			],
+			[
+				"Custom",
+				"CustomElementBase〔variable〕"
+			],
+			[
+				"defineP",
+				"defineProperties"
+			],
+			[
+				"component",
+				"componentCallback〔argument〕"
+			],
+			[
+				"ren",
+				"renderedContent〔variable〕"
+			],
+			[
+				"defineProp",
+				"defineProperty"
+			],
+			[
+				"extends",
+				"extendsType"
+			],
+			[
+				"parsed",
+				"parsedDefinition"
+			],
+			[
+				"parsecomp",
+				"parseComponentCallback〔function〕"
+			],
+			[
+				"parsecompo",
+				"parseComponentDefinition〔function〕"
+			],
+			[
+				"parseCompon",
+				"parseComponentDefinition〔function〕"
+			],
+			[
+				"defin",
+				"definition"
+			],
+			[
+				"extend",
+				"extendsType〔variable〕"
+			],
+			[
+				"babel",
+				"babelMinify"
+			],
+			[
+				"compoent",
+				"componentCallback"
+			],
+			[
+				"previousl",
+				"previouslyDefined〔variable〕"
+			],
+			[
+				"Elem",
+				"ElementTypes"
+			],
+			[
+				"extneds",
+				"extendsType〔variable〕"
+			],
+			[
+				"setInter",
+				"setInternalStaticProps"
+			],
+			[
+				"validate",
+				"validateElementName〔variable〕"
+			],
+			[
+				"README",
+				"README.mustache"
+			],
+			[
+				"onRoute",
+				"onRouteBeforeEnter"
+			],
+			[
+				"onR",
+				"onRouteLeave"
+			],
+			[
+				"assign",
+				"assignAttributes〔function〕"
+			],
+			[
+				"Exte",
+				"Extensible〔argument〕"
+			],
+			[
+				"make",
+				"makeObjectInheritable〔function〕"
+			],
+			[
+				"createE",
+				"createExtendableObject〔function〕"
+			],
+			[
+				"HTMLB",
+				"HTMLBase"
+			],
+			[
+				"Base",
+				"BaseMixin〔function〕"
+			],
+			[
+				"HTMLE",
+				"HTMLElementBase"
+			],
+			[
+				"protod",
+				"protoDescriptor.value"
+			],
+			[
+				"proto",
+				"protoDescriptor.value"
+			],
+			[
+				"element",
+				"elementBaseDescriptor"
+			],
+			[
+				"protode",
+				"protoDescriptor.value"
+			],
+			[
+				"ele",
+				"elementBaseDescriptor"
+			],
+			[
+				"E",
+				"ElementBaseDescriptor"
+			],
+			[
+				"ElementBase",
+				"ElementBaseDescriptor"
+			],
+			[
+				"Element",
+				"ElementBaseDescriptor"
+			],
+			[
+				"Elementbase",
+				"ElementBaseDescriptor〔variable〕"
+			],
+			[
+				"getProtot",
+				"getPrototypeChainOf"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 97.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pret",
+				"JsPrettier: Format Code"
+			],
+			[
+				"foramt",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"jspr",
+				"JsPrettier: Format Code"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"synta bab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"prett",
+				"JsPrettier: Format Code"
+			],
+			[
+				"snim",
+				"Snippet: html"
+			],
+			[
+				"snimpp",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"format",
+				"CodeFormatter: Format as HTML Syntax"
+			],
+			[
+				"prefer",
+				"Preferences: Settings"
+			],
+			[
+				"html",
+				"Snippet: html"
+			],
+			[
+				"lorm",
+				"LoremIpsum: (15) some"
+			],
+			[
+				"lor",
+				"LoremIpsum: (30) lots"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"synta json",
+				"Set Syntax: JSON"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"bab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"bable",
+				"Babel Transform"
+			],
+			[
+				"synta java",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"synt bab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdo pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"enable plug",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"markdown view",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"LiveReload: Enable/disable plugins",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"brow",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"liverelo",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"live",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"markdo chea",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"markdown change",
+				"MarkdownEditing: Change color scheme..."
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remve",
+				"Package Control: Remove Package"
+			],
+			[
+				"mark",
+				"Preferences: MarkdownLivePreview Settings"
+			],
+			[
+				"snta bab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"sybab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"pre",
+				"JsPrettier: Format Code"
+			],
+			[
+				"synta js",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"project",
+				"Project: Edit Project"
+			],
+			[
+				"syt bab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"synta cs",
+				"Set Syntax: SCSS"
+			],
+			[
+				"synta sas",
+				"Set Syntax: Sass"
+			],
+			[
+				"syn htl",
+				"Set Syntax: HTML"
+			],
+			[
+				"sy bab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"syn bab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"sysn mus",
+				"Set Syntax: HTML with mustaches"
+			],
+			[
+				"package resou",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"ui",
+				"UI: Select Color Scheme"
+			],
+			[
+				"synt sa",
+				"Set Syntax: SCSS"
+			],
+			[
+				"syan bab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"color s",
+				"UI: Select Color Scheme"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"color sche",
+				"UI: Select Color Scheme"
+			],
+			[
+				"syntax bab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"syntax mus",
+				"Set Syntax: HTML with mustaches"
+			],
+			[
+				"synta babe",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"synt babel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"color schem",
+				"UI: Select Color Scheme"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"boxy",
+				"Boxy Theme: Activation"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 494.0
+	},
+	"console":
+	{
+		"height": 96.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jeffadmin/Work/Playground/morphjam"
+	],
+	"file_history":
+	[
+		"/Users/jeffadmin/Work/Playground/astate/src/machine/index.js",
+		"/Users/jeffadmin/Work/VTS/index.html",
+		"/Users/jeffadmin/Work/Playground/webgl/webgl.sublime-project",
+		"/Users/jeffadmin/Work/Projects/trident/src/style/tachyons.js",
+		"/Users/jeffadmin/Work/Projects/trident/src/style/index.js",
+		"/Users/jeffadmin/Work/Projects/trident/main.js",
+		"/Users/jeffadmin/Work/Projects/trident/node_modules/lodash/_baseIsArrayBuffer.js",
+		"/Users/jeffadmin/Work/Projects/trident/node_modules/caniuse-db/data.json",
+		"/Users/jeffadmin/Work/Projects/trident/README.md",
+		"/Users/jeffadmin/Work/VTS/vtsshared/Packages/manifest.json",
+		"/Users/jeffadmin/Work/mq9/vr/MQ9VR_ChecklistTraining/Assets/Components/ComponentData.json",
+		"/Users/jeffadmin/Work/mq9/src/Assets/Resources/ComponentInfoData/ComponentInfoData.json",
+		"/Users/jeffadmin/Work/mq9/src/Assets/Resources/PABOI RDS/JSON/3D Explorer/sysXX.json",
+		"/Users/jeffadmin/Work/_Projects/DeltaUI/Assets/UI/DeltaUI/Components/Button/Button.cs",
+		"/Users/jeffadmin/Work/trident/src/components/model-viewer.js",
+		"/Users/jeffadmin/Work/trident/package.json",
+		"/Users/jeffadmin/Work/trident/.babelrc",
+		"/Users/jeffadmin/Work/trident/src/data/idents.json",
+		"/Users/jeffadmin/Work/trident/src/components/store-provider.js",
+		"/Users/jeffadmin/Work/trident/src/components/view.js",
+		"/Users/jeffadmin/Work/trident/src/index.html",
+		"/Users/jeffadmin/Work/trident/src/firebase.config.js",
+		"/Users/jeffadmin/Work/trident/firebase.config.js",
+		"/Users/jeffadmin/Work/trident/src/components/create.js",
+		"/Users/jeffadmin/Work/trident/fbx/viewer.html",
+		"/Users/jeffadmin/Work/trident/src/firebase.js",
+		"/Users/jeffadmin/Work/trident/src/config.json",
+		"/Users/jeffadmin/Work/trident/trident.config.json",
+		"/Users/jeffadmin/Work/trident/models/viewer.js",
+		"/Users/jeffadmin/Work/trident/fbx/ac_quicktime.js",
+		"/Users/jeffadmin/Work/trident/src/styles.js",
+		"/Users/jeffadmin/Work/trident/build/src.e31bb0bc.css",
+		"/Users/jeffadmin/Work/trident/README.md",
+		"/Users/jeffadmin/Work/trident/src/style.pcss",
+		"/Users/jeffadmin/Work/trident/.prettierrc.js",
+		"/Users/jeffadmin/Work/trident/.gitignore",
+		"/Users/jeffadmin/Work/trident/.postcssrc",
+		"/Users/jeffadmin/Work/DeltaUI/Assets/UI/DeltaUI/DeltaUIBase.cs",
+		"/Users/jeffadmin/Work/Delta/src/Delta/Packages/manifest.json",
+		"/Users/jeffadmin/Work/DeltaUI/UI.cs",
+		"/Users/jeffadmin/Work/DeltaUI/Button/DUIButton.cs",
+		"/Users/jeffadmin/Work/DeltaUI/DeltaUI/DeltaUI.cs",
+		"/Users/jeffadmin/Work/fairygui/Examples.Unity5/UIProject/UIProject/settings/Publish.json",
+		"/Users/jeffadmin/Work/facebook/yoga/csharp/tests/Facebook.Yoga/test_macos.sh",
+		"/Users/jeffadmin/Work/node/font-creator/Icon/Add.svg",
+		"/Users/jeffadmin/Downloads/MQ9-Glyphs/selection.json",
+		"/Users/jeffadmin/Work/mq9/src/mq9_3d_explorer/Assets/GUI/Images/Logo/without Text.svg",
+		"/Users/jeffadmin/Work/node/font-creator/font/MQ9-Glyphs.json",
+		"/Users/jeffadmin/Work/node/font-creator/svg/Menu.svg",
+		"/Users/jeffadmin/Library/Application Support/com.bohemiancoding.sketch3/Plugins/MyPlugin.sketchplugin/Contents/Sketch/MyScript.js",
+		"/Users/jeffadmin/Work/node/font-creator/package.json",
+		"/Users/jeffadmin/Work/sketch-plugins/manifest.json",
+		"/Users/jeffadmin/Work/mq9/design/Wireframes/prototype.studio",
+		"/Users/jeffadmin/Downloads/reapermoodboard.html",
+		"/Users/jeffadmin/.config/verdaccio/config.yaml",
+		"/Users/jeffadmin/Work/eoir/eoir_csp_companion/Assets/Resources/TopicPanels.json",
+		"/Users/jeffadmin/Work/eoir/eoir_csp_companion/AssetsTestFile.json",
+		"/Users/jeffadmin/Library/Application Support/Code/User/settings.json",
+		"/Users/jeffadmin/Work/css/app/Assets/Scripts/TreeViewControllChildrenId.cs",
+		"/Users/jeffadmin/Work/css/app/Assets/Resources/RampPartsXml.xml",
+		"/Users/jeffadmin/Work/css/app/Assets/Resources/ParallelPartsXML.xml",
+		"/Users/jeffadmin/Work/css/app/Assets/StreamingAssets/ParallelPartsXML.xml",
+		"/Users/jeffadmin/Desktop/test.js",
+		"/Users/jeffadmin/Work/css/app/css.sublime-project",
+		"/Users/jeffadmin/Work/css/app/app.sln",
+		"/Users/jeffadmin/Applications/Wine Stable.app/Contents/MacOS/wine",
+		"/Users/jeffadmin/Work/playground/webgl/.babelrc",
+		"/Users/jeffadmin/Work/playground/webgl/.postcssrc",
+		"/Users/jeffmiller/WebServer/freshly/src/index.html",
+		"/Users/jeffmiller/WebServer/freshly/src/app.js",
+		"/Users/jeffmiller/WebServer/freshly/package.json",
+		"/Users/jeffmiller/Downloads/Framer_Studio_v116[macOS]/iMacAPPS - Free APPS.url",
+		"/Users/jeffmiller/Downloads/Framer_Studio_v116[macOS]/Facebook.url",
+		"/Users/jeffmiller/Desktop/https---gist.githubusercontent.com-jamiller619-f65dbcd9ad9f823fb.webloc",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/backdrop/backdrop.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/backdrop/backdrop.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/weather-icon/weather-icon.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/backdrop/logo.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/carousel/carousel.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/app.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/loader/loader.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/models/conditions.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/global.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/location-slide/location-slide.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/utils.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/models/user.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/models/location.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/models/weather.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/models/cache.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/animate.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/index.html",
+		"/Users/jeffmiller/WebServer/moonbeam/package.json",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/weather-icon/weather-icon.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/slide/slide.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/carousel/slide.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/carousel/carousel.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/slide/slide.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/loader/pulse-scale.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/loader/pulse-wave.pcss",
+		"/Users/jeffmiller/Desktop/dopedepot",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/carousel/slide.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/app.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/app.html",
+		"/Users/jeffmiller/WebServer/moonbeam/src/models/google-api.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/background/background.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/background/background.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/index.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/menu/menu.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/menu/menu.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/services/location.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/header/header.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/services/weather.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/card/card.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/index.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/card/card.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/header/header.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/menu/index.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/header/index.js",
+		"/Users/jeffmiller/Xcode/untitled folder/xvids.txt",
+		"/Users/jeffmiller/WebServer/moonbeam/.gitignore",
+		"/Users/jeffmiller/WebServer/moonbeam/moonbeam.sublime-project",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/card/index.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/card/weather-card.pcss",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/card/weather-card.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/carousel/tile.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/carousel/index.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/components/background/index.js",
+		"/Users/jeffmiller/WebServer/moonbeam/src/firebase.js"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 132.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.YAMLMacros":
+	{
+		"height": 94.0
+	},
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 145.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 383.0
+	},
+	"pinned_build_system": "",
+	"project": "morphjam.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"main",
+				"main.js"
+			],
+			[
+				"data",
+				"node_modules/caniuse-db/data.json"
+			],
+			[
+				"bab",
+				"node_modules/lodash/_baseIsArrayBuffer.js"
+			],
+			[
+				"treecon",
+				"Assets/Scripts/TreeController.cs"
+			],
+			[
+				"rampp",
+				"Assets/StreamingAssets/RampPartsXML.xml"
+			],
+			[
+				"paral",
+				"Assets/StreamingAssets/ParallelPartsXML.xml"
+			],
+			[
+				"paralle",
+				"Assets/StreamingAssets/ParallelPartsXML.xml"
+			],
+			[
+				"paraell",
+				"Assets/Resources/ParallelPartsXML.xml"
+			],
+			[
+				"ramp xml",
+				"Assets/Resources/RampPartsXml.xml"
+			],
+			[
+				"subli",
+				"css.sublime-project"
+			],
+			[
+				"cac",
+				"src/models/cache.js"
+			],
+			[
+				"load",
+				"src/components/loader/loader.js"
+			],
+			[
+				"cache",
+				"src/models/cache.js"
+			],
+			[
+				"slide",
+				"src/components/carousel/slide.pcss"
+			],
+			[
+				"app",
+				"src/app.js"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"google",
+				"src/models/google-api.js"
+			],
+			[
+				"location",
+				"src/models/location.js"
+			],
+			[
+				"carou",
+				"src/components/carousel/carousel.js"
+			],
+			[
+				"user",
+				"src/models/user.js"
+			],
+			[
+				"head",
+				"src/components/header/header.js"
+			],
+			[
+				"back",
+				"src/components/background/background.pcss"
+			],
+			[
+				"weath",
+				"src/services/weather.js"
+			],
+			[
+				"card",
+				"src/components/card/card.js"
+			],
+			[
+				"weat",
+				"src/services/weather.js"
+			],
+			[
+				"loca",
+				"src/services/location.js"
+			],
+			[
+				"weather car",
+				"src/components/card/weather-card.js"
+			],
+			[
+				"weather-c",
+				"src/components/card/weather-card.pcss"
+			],
+			[
+				"carouse",
+				"src/components/carousel/index.js"
+			],
+			[
+				"header",
+				"src/components/header/index.pcss"
+			],
+			[
+				"loc",
+				"src/services/location.js"
+			],
+			[
+				"header/ind",
+				"src/components/header/index.js"
+			],
+			[
+				"prett",
+				".prettierrc.js"
+			],
+			[
+				"ignor",
+				".gitignore"
+			],
+			[
+				"utils",
+				"packages/freshdom-utils/fresh-element.js"
+			],
+			[
+				"fresh",
+				"packages/freshdom/core/fresh.js"
+			],
+			[
+				"is fresh",
+				"packages/freshdom-utils/fresh-element.js"
+			],
+			[
+				"packag",
+				"package.json"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"helpermerge",
+				"packages/freshdom/helpers/merge.js"
+			],
+			[
+				"coreui",
+				"packages/freshdom/core/uid.js"
+			],
+			[
+				"uuid",
+				"node_modules/fsevents/node_modules/.bin/uuid"
+			],
+			[
+				"coreuid",
+				"packages/freshdom/core/uid.js"
+			],
+			[
+				"merge",
+				"packages/freshdom/helpers/merge.js"
+			],
+			[
+				"render",
+				"packages/freshdom/core/render.js"
+			],
+			[
+				"router",
+				"packages/freshdom/router/router.js"
+			],
+			[
+				"base",
+				"packages/freshdom/core/base.js"
+			],
+			[
+				"paths",
+				"scripts/paths.js"
+			],
+			[
+				"rollupplugincl",
+				"node_modules/rollup-plugin-cleanup/dist/rollup-plugin-cleanup.js"
+			],
+			[
+				"node-reso",
+				"node_modules/rollup-plugin-node-resolve/dist/rollup-plugin-node-resolve.cjs.js"
+			],
+			[
+				"macaddress/inde",
+				"node_modules/macaddress/index.js"
+			],
+			[
+				"fastdom-promised",
+				"node_modules/fastdom/extensions/fastdom-promised.js"
+			],
+			[
+				"url-patt",
+				"node_modules/url-pattern/lib/url-pattern.js"
+			],
+			[
+				"trans",
+				"lib/element/transpose.js"
+			],
+			[
+				"event",
+				"lib/element/events.js"
+			],
+			[
+				"route",
+				"lib/router/Route.js"
+			],
+			[
+				"events",
+				"lib/element/events.js"
+			],
+			[
+				"extend",
+				"lib/helpers/extend.js"
+			],
+			[
+				"create",
+				"lib/createElement.js"
+			],
+			[
+				"creat",
+				"lib/createElement.js"
+			],
+			[
+				"even",
+				"lib/dom/events.js"
+			],
+			[
+				"freshel",
+				"lib/FreshElement.js"
+			],
+			[
+				"has",
+				"lib/has.js"
+			],
+			[
+				"make",
+				"node_modules/debug/Makefile"
+			],
+			[
+				"store",
+				"lib/store/store.js"
+			],
+			[
+				"domre",
+				"lib/DOMRenderer.js"
+			],
+			[
+				"home",
+				"node_modules/.bin/user-home"
+			],
+			[
+				"inde",
+				"lib/index.js"
+			],
+			[
+				"rout",
+				"lib/router/Route.js"
+			],
+			[
+				"roll",
+				"build/rollup.config.js"
+			],
+			[
+				"inter",
+				"lib/elements/InternalLink.js"
+			],
+			[
+				"rollup",
+				"build/rollup.config.js"
+			],
+			[
+				"poly",
+				"lib/helpers/polyfill.js"
+			],
+			[
+				"domint",
+				"lib/dom/DOMInterface.js"
+			],
+			[
+				"domin",
+				"lib/dom/DOMInterface.js"
+			],
+			[
+				"createdom",
+				"lib/createDOM.js"
+			],
+			[
+				"createdome",
+				"lib/dom/createDOMElement.js"
+			],
+			[
+				"rend",
+				"lib/render.js"
+			],
+			[
+				"tag",
+				"lib/tag.js"
+			],
+			[
+				"intern",
+				"lib/elements/InternalLink.js"
+			],
+			[
+				"morph",
+				"node_modules/morphdom/src/morphdom.js"
+			],
+			[
+				"morphdom",
+				"node_modules/morphdom/dist/morphdom.js"
+			],
+			[
+				"slot",
+				"lib/elements/Slot.js"
+			],
+			[
+				"ele",
+				"dist/elements.js"
+			],
+			[
+				"eve",
+				"lib/events.js"
+			],
+			[
+				"createdo",
+				"lib/createDOM.js"
+			],
+			[
+				"svg",
+				"lib/dom/types/svgNodes.js"
+			],
+			[
+				"isd",
+				"lib/helpers/isDefined.js"
+			],
+			[
+				"jasmin",
+				"dev/projects/jasmin.js"
+			],
+			[
+				"about",
+				"dev/about.js"
+			],
+			[
+				"foo",
+				"dev/footer.js"
+			],
+			[
+				"hea",
+				"dev/header.js"
+			],
+			[
+				"pa",
+				"package.json"
+			],
+			[
+				"jas",
+				"dev/projects/jasmin.js"
+			],
+			[
+				"ind",
+				"dev/index.html"
+			],
+			[
+				"foot",
+				"dev/footer.js"
+			],
+			[
+				"tran",
+				"dev/transitions.js"
+			],
+			[
+				"sprin",
+				"dev/projects/spring.js"
+			],
+			[
+				"icon",
+				"dev/icon.js"
+			],
+			[
+				"bann",
+				"dev/info-banner.js"
+			],
+			[
+				"footer",
+				"dev/footer.js"
+			],
+			[
+				"stoe",
+				"dev/store.js"
+			],
+			[
+				"hed",
+				"dev/header.js"
+			],
+			[
+				"mainba",
+				"dev/scss/main.bak.scss"
+			],
+			[
+				"butt",
+				"dev/button-link.js"
+			],
+			[
+				"index",
+				"dev/index.html"
+			],
+			[
+				"link",
+				"dev/button-link.js"
+			],
+			[
+				"button",
+				"dev/button-link.js"
+			],
+			[
+				"info",
+				"dev/info-banner.js"
+			],
+			[
+				"jasm",
+				"dev/projects/jasmin.js"
+			],
+			[
+				"icons",
+				"dev/images/icons.svg"
+			],
+			[
+				"pris",
+				"dev/scss/prism.scss"
+			],
+			[
+				"text",
+				"dev/text-link.js"
+			],
+			[
+				"style",
+				"dev/projects/style.js"
+			],
+			[
+				"pri",
+				"dev/scss/prism.scss"
+			],
+			[
+				"bak",
+				"dev/scss/main.bak.scss"
+			],
+			[
+				"api",
+				"dev/projects/code/api.js"
+			],
+			[
+				"dat",
+				"dev/data/index.json"
+			],
+			[
+				"hom",
+				"dev/home.js"
+			],
+			[
+				"gith",
+				"dev/images/icons/github.svg"
+			],
+			[
+				"bu",
+				"dev/button-link.js"
+			],
+			[
+				"text-lin",
+				"dev/text-link.js"
+			],
+			[
+				"indejs",
+				"dev/data/index.json"
+			],
+			[
+				"he",
+				"dev/header.js"
+			],
+			[
+				"pac",
+				"package.json"
+			],
+			[
+				"main.ba",
+				"dev/scss/main.bak.scss"
+			],
+			[
+				"bar",
+				"dev/projects/barstacks.js"
+			],
+			[
+				"typo",
+				"dev/scss/typography.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/WebServer/barstacks/barstacks.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 210.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,4 +1,4 @@
-# tatermorph
+# morphjam
 [![npm version][2]][3]
 [![downloads][8]][9] [![js-standard-style][10]][11]
 
@@ -6,7 +6,7 @@ Hyper fast diffing algorithm for real DOM nodes :zap:
 
 ## Usage
 ```js
-var morph = require('tatermorph')
+var morph = require('morphjam')
 var html = require('bel')
 
 var tree = html`<div>hello people</div>`
@@ -47,13 +47,13 @@ var el = html`
 Sometimes we want to tell the algorithm to not evaluate certain nodes (and its
 children). This can be because we're sure they haven't changed, or perhaps
 because another piece of code is managing that part of the DOM tree. To achieve
-this `tatermorph` evaluates the `.isSameNode()` method on nodes to determine if
+this `morphjam` evaluates the `.isSameNode()` method on nodes to determine if
 they should be updated or not.
 
 ```js
 var el = html`<div>node</div>`
 
-// tell tatermorph to not compare the DOM tree if they're both divs
+// tell morphjam to not compare the DOM tree if they're both divs
 el.isSameNode = function (target) {
   return (target && target.nodeName && target.nodeName === 'DIV')
 }
@@ -73,19 +73,22 @@ This is a fork of the choojs project nanomorph, however we have a few difference
 Events are determined no longer a hard-coded list, but are determined by a function
 you provide. We've also changed some of the logic to be less nuanced about namespaces. This shares _most_ of the same test suite.
 
+### How is this different from tatermorph?
+So far, it's the same package, only renamed. But that will change soon as it becomes more integrated with astate.
+
 ### This library seems cool, I'd like to build my own!
-tatermorph was optimized for simplicity, but different situations might require
+morphjam was optimized for simplicity, but different situations might require
 different tradeoffs. So in order to allow folks to build their own
 implementation we expose our test suite as a function you can call. So
 regardless if you're doing it to solve a problem, or just for fun: you can use
 the same tests we use for your own implementation. Yay! :sparkles:
 
 ## API
-### tree = tatermorph(oldTree, newTree, getEvents)
+### tree = morphjam(oldTree, newTree, getEvents)
 Diff a tree of HTML elements against another tree of HTML elements and create
 a patched result that can be applied on the DOM.
 
-:warning: tatermorph will modify the newTree and it should be discarded after use
+:warning: morphjam will modify the newTree and it should be discarded after use
 
 `getEvents` is a function which takes in a newNode and oldNode, and returns
 a list of events. It is an optional parameter, and can (in the similest case)
@@ -94,7 +97,7 @@ scenarios, you can query for events for both the new and old element.
 
 ## Installation
 ```sh
-$ npm install tatermorph
+$ npm install morphjam
 ```
 
 ## See Also
@@ -120,10 +123,10 @@ $ npm install tatermorph
 ## Original License
 [MIT](https://tldrlegal.com/license/mit-license)
 
-[2]: https://img.shields.io/npm/v/tatermorph.svg?style=flat-square
-[3]: https://npmjs.org/package/tatermorph
-[8]: http://img.shields.io/npm/dm/tatermorph.svg?style=flat-square
-[9]: https://npmjs.org/package/tatermorph
+[2]: https://img.shields.io/npm/v/morphjam.svg?style=flat-square
+[3]: https://npmjs.org/package/morphjam
+[8]: http://img.shields.io/npm/dm/morphjam.svg?style=flat-square
+[9]: https://npmjs.org/package/morphjam
 [10]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [11]: https://github.com/feross/standard
 
