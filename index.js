@@ -2,6 +2,8 @@ const morph = require('./lib/morph')
 
 const TEXT_NODE = 3
 // var DEBUG = false
+// 
+const isObject = test => typeof test === 'object'
 
 // Morph one tree into another tree
 //
@@ -29,9 +31,7 @@ module.exports = (oldTree, newTree, getEvents) => {
   // }
   // assert.equal(typeof oldTree, 'object', 'nanomorph: oldTree should be an object')
   // assert.equal(typeof newTree, 'object', 'nanomorph: newTree should be an object')
-  const objCheck = test => typeof test === 'object'
-
-  if (!objCheck(oldTree) || !objCheck(newTree)) {
+  if (isObject(oldTree) !== true || isObject(newTree) !== true) {
     throw new Error('morphjam: oldTree and newTree should be an object')
   }
 
